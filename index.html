@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SgaraPC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="source/FAVICONSGARA.ico" type="image/x-icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8116257492164829"
+     crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animazione di sfondo a sfumatura pulsante */
+        @keyframes pulse-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-bg {
+            background: linear-gradient(-45deg, #2a2c38, #181b22, #2a2c38);
+            background-size: 400% 400%;
+            animation: pulse-gradient 15s ease infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            opacity: 0.5;
+        }
+
+        /* Stile per le sezioni che appaiono con un'animazione */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .icon-svg {
+            width: 2rem;
+            height: 2rem;
+            fill: currentColor;
+        }
+        .noselect {
+            -webkit-user-select: none; /* Safari */
+            user-select: none; /* Non-prefixed version, 
+                                currently supported by all other modern browsers */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Animazione di sfondo -->
+    <div class="animated-bg"></div>
+
+    <!-- Intestazione e Navigazione -->
+    <header class="py-6 fixed top-0 w-full z-20 backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-80">
+        <nav class="container mx-auto flex justify-between items-center px-6">
+            <a href="#hero" class="text-3xl font-bold gradient-text">SgaraPC</a>
+            <div class="space-x-8 hidden md:flex">
+                <a href="#servizi" class="hover:text-purple-400 transition-colors">Servizi</a>
+                <a href="#chi-siamo" class="hover:text-purple-400 transition-colors">Chi Siamo</a>
+                <a href="#contatti" class="hover:text-purple-400 transition-colors">Contatti</a>
+            </div>
+            <!-- Hamburger per mobile, non implementato per l'editor, ma la struttura è qui -->
+        </nav>
+    </header>
+
+    <main class="relative z-10">
+        <!-- Sezione Hero -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center p-6">
+            <div class="fade-in-up max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight gradient-text mb-4">
+                    SgaraPC <br> ‎ 
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    Il tuo punto di riferimento per il mondo tech, assemblaggio e riparazioni di computer.
+                </p>
+                <a href="#servizi" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 shadow-lg noselect">
+                    Scopri i Nostri Servizi
+                </a>
+            </div>
+        </section>
+
+        <!-- Sezione Servizi -->
+        <section id="servizi" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4 gradient-text fade-in-up">I Nostri Servizi</h2>
+                <p class="text-lg text-gray-400 mb-12 fade-in-up">Offriamo soluzioni complete per ogni tua esigenza tecnologica.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in-up noselect">
+                    <!-- Servizio 1: Riparazione -->
+                    <div class="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all transform hover:scale-105">
+                        <svg class="icon-svg mx-auto mb-4 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Riparazioni PC</h3>
+                        <p class="text-gray-400">Diagnosi e riparazione di guasti hardware e software, per riportare in vita il tuo computer.</p>
+                    </div>
+                    <!-- Servizio 2: Assemblaggio -->
+                    <div class="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all transform hover:scale-105">
+                        <svg class="icon-svg mx-auto mb-4 text-purple-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M14.59 8.29l-3.29 3.29-1.3-1.3-1.42 1.42 2.72 2.72 4.71-4.71-1.42-1.41zM20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 18H5V4h14v16z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Assemblaggio PC</h3>
+                        <p class="text-gray-400">Creiamo il tuo computer personalizzato, pezzo per pezzo, in base alle tue esigenze e budget.</p>
+                    </div>
+                    <!-- Servizio 3: Upgrade -->
+                    <div class="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all transform hover:scale-105">
+                        <svg class="icon-svg mx-auto mb-4 text-pink-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.41l-5.17 5.17-2.83-2.83-1.41 1.41 4.24 4.24 6.59-6.59z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Upgrade Hardware</h3>
+                        <p class="text-gray-400">Potenzia il tuo computer con componenti di ultima generazione per massimizzare le prestazioni.</p>
+                    </div>
+                    <!-- Servizio 4: Software -->
+                    <div class="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 hover:border-purple-500 transition-all transform hover:scale-105">
+                        <svg class="icon-svg mx-auto mb-4 text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-100 mb-2">Assistenza Software</h3>
+                        <p class="text-gray-400">Installazione, configurazione e risoluzione di problemi software per un sistema sempre efficiente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Chi Siamo -->
+        <section id="chi-siamo" class="py-20 bg-gray-800 border-t border-gray-700">
+            <div class="container mx-auto px-6 fade-in-up">
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Chi Siamo</h2>
+                <p class="text-center max-w-2xl mx-auto text-lg text-gray-400 mb-8">
+                    Siamo un team di appassionati di tecnologia, dedicati a fornire servizi di qualità con trasparenza e professionalità. La nostra missione è rendere il mondo dell'informatica accessibile e privo di stress.
+                </p>
+                <div>
+                    <table style="margin: auto;" class="noselect">
+                        <tr>
+                            <td>
+                                <img src="source/MIKU.png" width="200px" style="border-radius: 100%;">
+                                <p class="text-4xl font-bold text-center mb-4 gradient-text">
+                                    Rylee
+                                </p>
+                            </td>
+                            <td>
+                                <img src="source/TETO.png" width="200px" style="border-radius: 100%;">
+                                <p class="text-4xl font-bold text-center mb-4 gradient-text">
+                                    Sgarra
+                                </p>
+                            </td>
+                            <td>
+                                <img src="source/NERU.png" width="200px" style="border-radius: 100%;">
+                                <p class="text-4xl font-bold text-center mb-4 gradient-text">
+                                    Ivy
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Contatti -->
+        <section id="contatti" class="py-20 bg-gray-900 border-t border-gray-700">
+            <div class="container mx-auto px-6 fade-in-up">
+                <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Contattaci</h2>
+                <p class="text-center max-w-2xl mx-auto text-lg text-gray-400 mb-8">
+                    Hai bisogno di un preventivo o di una consulenza? Non esitare a scriverci!
+                </p>
+                <div class="max-w-md mx-auto text-center">
+                    <p class="text-lg mb-4">Email: <a href="mailto:supporto@sgarapc.com" class="text-blue-400 hover:underline">supporto@sgarapc.com</a></p>
+                    <p class="text-lg">Telefono: <a href="tel:+393334036581" class="text-blue-400 hover:underline">+39 333 403 6581</a></p>
+                    <!-- I dati di contatto sono fittizi -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500 border-t border-gray-800">
+        <p>© 2025 SgaraPC. Tutti i diritti riservati.</p>
+        <br><a href="https://www.sgarapc.com/privacy/"><p>Privacy Policy</p></a>
+    </footer>
+
+    <script>
+        // Funzione per animare gli elementi all'entrata nel viewport
+        function setupScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in-up');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            elements.forEach(el => observer.observe(el));
+        }
+
+        // Avvia l'animazione al caricamento della pagina
+        window.addEventListener('load', setupScrollAnimation);
+
+        // Aggiungi un'animazione di smooth scrolling ai link di navigazione
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
